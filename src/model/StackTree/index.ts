@@ -1,5 +1,5 @@
 import { ComputerScience } from "./oneLayer";
-import { StackNode } from "../../type/dataType";
+import { StackNode } from "../../type/modelType";
 
 const StackTree: StackNode = {
   title: "Stack Tree Root",

@@ -1,5 +1,5 @@
 import { getArrayAverage } from "./arrFunc";
-import { StackNode } from "../type/dataType";
+import { StackNode } from "../type/modelType";
 
 export const getPoint = (stack: StackNode) => {
   if (stack.point) return stack.point;

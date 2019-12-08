@@ -1,5 +1,5 @@
 import { DataBase, ComputerNetwork } from "./twoLayer";
-import { StackNode } from "../../type/dataType";
+import { StackNode } from "../../type/modelType";
 
 export const ComputerScience: StackNode = {
   title: "Coumputer Science",

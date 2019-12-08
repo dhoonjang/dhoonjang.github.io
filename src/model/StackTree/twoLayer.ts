@@ -1,4 +1,4 @@
-import { StackNode } from "../../type/dataType";
+import { StackNode } from "../../type/modelType";
 
 export const DataBase: StackNode = {
   title: "Data Base",

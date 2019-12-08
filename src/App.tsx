@@ -1,6 +1,6 @@
 import React from "react";
-import stackTree from "./data/StackTree/index";
-import { getPoint } from "./func/dataFunc";
+import stackTree from "./model/StackTree/index";
+import { getPoint } from "./func/modelFunc";
 
 const App: React.FC = () => {
   const myPoint = getPoint(stackTree);
