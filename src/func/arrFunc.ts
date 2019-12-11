@@ -3,15 +3,14 @@ export const getArrayAverage = (arr: Array<number>) => {
 };
 
 export class ImStack<T> {
-  private data: T[] = [];
+  private data: Array<T> = [];
 
-  constructor(dataInput: T[]) {
+  constructor(dataInput: Array<T>) {
     this.data = dataInput;
   }
 
   push(item: T): ImStack<T> {
     this.data.push(item);
-
     return new ImStack<T>(this.data);
   }
 

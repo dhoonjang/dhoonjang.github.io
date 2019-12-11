@@ -1,12 +1,14 @@
 import { getArrayAverage } from "./arrFunc";
 import { StackNode } from "../type/modelType";
 
-export const getPoint = (stack: StackNode) => {
-  if (stack.point) return stack.point;
+export const getPoint = (stackNode: StackNode) => {
+  if (stackNode.point) return stackNode.point;
 
-  const weightArray: Array<number> = stack.children.map(child => child.weight);
+  const weightArray: Array<number> = stackNode.children.map(
+    child => child.weight
+  );
 
-  const pointArray: Array<number> = stack.children.map(
+  const pointArray: Array<number> = stackNode.children.map(
     child => getPoint(child.stack) * child.weight
   );
 
