@@ -24,6 +24,6 @@ export const FrontEnd: StackNode = {
 export const BackEnd: StackNode = {
   title: "Back End",
   description: "",
-  point: 12,
+  point: 10,
   children: []
 };

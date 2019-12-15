@@ -33,7 +33,13 @@ const StackTreeView: React.FC = () => {
   return (
     <div className="StackTree">
       <h1 onClick={navUp}>Stack Tree</h1>
-      <StackNodeView stack={stack} level={1} navDown={navDown} />
+      <StackNodeView
+        stack={stack}
+        level={1}
+        parentWeight={1}
+        calWeight={1}
+        navDown={navDown}
+      />
     </div>
   );
 };
