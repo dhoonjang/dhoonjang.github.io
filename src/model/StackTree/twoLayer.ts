@@ -14,6 +14,13 @@ export const ComputerNetwork: StackNode = {
   children: []
 };
 
+export const OperatingSystem: StackNode = {
+  title: "Operating System",
+  description: "운영체제(OS)에 대한 이해와 관련 지식들",
+  point: 10,
+  children: []
+};
+
 export const FrontEnd: StackNode = {
   title: "Front End",
   description: "",

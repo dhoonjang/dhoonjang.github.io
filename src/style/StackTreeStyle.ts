@@ -27,10 +27,14 @@ export const StackBody = styled.div<StackBodySP>`
   margin: 0 auto;
 `;
 
+export const StackDescription = styled.div`
+  font-size: 2vmin;
+`;
+
 export const StackChildren = styled.div<StackChildrenSP>`
   display: grid;
-  margin-top: 5px;
-  grid-gap: 10px;
+  margin-top: 0.5vmin;
+  grid-gap: 1vmin;
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(${props => props.childrenNumber}, auto);

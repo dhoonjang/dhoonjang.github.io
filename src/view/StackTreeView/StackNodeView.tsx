@@ -1,7 +1,11 @@
 import React, { useMemo } from "react";
 import { getStackPoint } from "../../func/modelFunc";
 import { StackNodeProps } from "../../type/viewType";
-import { StackBody, StackChildren } from "../../style/StackTreeStyle";
+import {
+  StackBody,
+  StackChildren,
+  StackDescription
+} from "../../style/StackTreeStyle";
 
 const StackNodeView: React.FC<StackNodeProps> = ({
   stack,
@@ -39,6 +43,9 @@ const StackNodeView: React.FC<StackNodeProps> = ({
       {stack.title !== "root" && (
         <StackBody size={calWeight * parentWeight} point={stackPoint}>
           {stack.title}
+          {level === 1 && (
+            <StackDescription>{stack.description}</StackDescription>
+          )}
         </StackBody>
       )}
       <StackChildren childrenNumber={stack.children.length}>
