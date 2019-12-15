@@ -29,6 +29,10 @@ export const StackBody = styled.div<StackBodySP>`
 
 export const StackDescription = styled.div`
   font-size: 2vmin;
+  max-width: 50vmin;
+  margin: 0 auto;
+  margin-top: 2vmin;
+  text-align: justify;
 `;
 
 export const StackChildren = styled.div<StackChildrenSP>`
