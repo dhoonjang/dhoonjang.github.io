@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { getPoint } from "../../func/modelFunc";
+import { getStackPoint } from "../../func/modelFunc";
 import { StackNodeProps } from "../../type/viewType";
 
 const StackNodeView: React.FC<StackNodeProps> = ({
@@ -8,7 +8,7 @@ const StackNodeView: React.FC<StackNodeProps> = ({
   navDown,
   clickFunc
 }) => {
-  const stackPoint = useMemo(() => getPoint(stack), [stack]);
+  const stackPoint = useMemo(() => getStackPoint(stack), [stack]);
 
   const makeChildren = useMemo(
     () =>

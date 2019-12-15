@@ -10,13 +10,15 @@ export class ImStack<T> {
   }
 
   push(item: T): ImStack<T> {
-    this.data.push(item);
-    return new ImStack<T>(this.data);
+    let st = new ImStack<T>(this.data);
+    st.data.push(item);
+    return st;
   }
 
   pop(): ImStack<T> {
-    this.data.pop();
-    return new ImStack<T>(this.data);
+    let st = new ImStack<T>(this.data);
+    st.data.pop();
+    return st;
   }
 
   top(): T {
