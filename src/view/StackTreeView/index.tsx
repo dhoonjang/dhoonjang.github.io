@@ -3,6 +3,8 @@ import StackTree from "../../model/StackTree/index";
 import StackNodeView from "./StackNodeView";
 import { StackNode } from "../../type/modelType";
 import { ImStack } from "../../func/arrFunc";
+import upicon from "../../img/upicon.png";
+import { StackTreeUpIcon } from "../../style/StackTreeStyle";
 
 const StackTreeView: React.FC = () => {
   const [stack, setStack] = useState<StackNode>(StackTree);
@@ -32,7 +34,7 @@ const StackTreeView: React.FC = () => {
 
   return (
     <div className="StackTree">
-      <h1 onClick={navUp}>Stack Tree</h1>
+      <StackTreeUpIcon src={upicon} onClick={navUp} />
       <StackNodeView
         stack={stack}
         level={1}

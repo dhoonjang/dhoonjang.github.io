@@ -9,6 +9,13 @@ type StackChildrenSP = {
   childrenNumber: number;
 };
 
+export const StackTreeUpIcon = styled.img`
+  position: fixed;
+  width: 5vmin;
+  ltop: 10px;
+  left: 20px;
+`;
+
 export const StackBody = styled.div<StackBodySP>`
   display: grid;
   width: ${props => props.size * 80}vmin;
