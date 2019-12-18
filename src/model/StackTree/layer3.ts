@@ -1,5 +1,5 @@
 import { StackNode } from "../../type/modelType";
-import { ReactHooks, PropsStateManage } from "./layer4";
+import { ReactHooks, PropsStateManage, ComponentLifeCycle } from "./layer4";
 
 //FrontEnd
 export const ReactLibrary: StackNode = {
@@ -7,7 +7,8 @@ export const ReactLibrary: StackNode = {
   description: "웹 뷰 중심의 프론트엔드 라이브러리",
   children: [
     { stack: ReactHooks, weight: 3 },
-    { stack: PropsStateManage, weight: 5 }
+    { stack: PropsStateManage, weight: 5 },
+    { stack: ComponentLifeCycle, weight: 4 }
   ]
 };
 
