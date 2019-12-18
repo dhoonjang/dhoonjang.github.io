@@ -4,7 +4,7 @@ import {
   FrontEnd,
   BackEnd,
   OperatingSystem
-} from "./twoLayer";
+} from "./layer2";
 import { StackNode } from "../../type/modelType";
 
 export const ComputerScience: StackNode = {
@@ -24,4 +24,10 @@ export const Web: StackNode = {
     { stack: FrontEnd, weight: 4 },
     { stack: BackEnd, weight: 1 }
   ]
+};
+
+export const DesignPattern: StackNode = {
+  title: "Design Pattern",
+  description: "프로그램을 설계하는 패턴",
+  children: []
 };

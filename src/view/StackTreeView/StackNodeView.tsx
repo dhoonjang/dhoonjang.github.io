@@ -15,6 +15,10 @@ const StackNodeView: React.FC<StackNodeProps> = ({
   navDown,
   clickFunc
 }) => {
+  console.log(stack.title);
+  console.log(calWeight);
+  console.log(parentWeight);
+
   const stackPoint = useMemo(() => getStackPoint(stack), [stack]);
 
   const makeChildren = useMemo(() => {
@@ -22,6 +26,7 @@ const StackNodeView: React.FC<StackNodeProps> = ({
       (sum, current) => sum + current.weight,
       0
     );
+
     return stack.children.map((child, index) => {
       let clickFunc;
       if (navDown && level === 1) clickFunc = () => navDown(index);
@@ -30,16 +35,16 @@ const StackNodeView: React.FC<StackNodeProps> = ({
           stack={child.stack}
           level={level + 1}
           calWeight={child.weight / weightSum}
-          parentWeight={calWeight}
+          parentWeight={calWeight * parentWeight}
           key={child.stack.title}
           clickFunc={clickFunc}
         />
       );
     });
-  }, [stack, calWeight, level, navDown]);
+  }, [stack, calWeight, level, navDown, parentWeight]);
 
   return (
-    <div className="StackNode" onClick={clickFunc}>
+    <div onClick={clickFunc}>
       {stack.title !== "root" && (
         <StackBody size={calWeight * parentWeight} point={stackPoint}>
           {stack.title}

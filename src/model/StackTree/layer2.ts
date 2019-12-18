@@ -1,4 +1,5 @@
 import { StackNode } from "../../type/modelType";
+import { ReactLibrary, RestAPI } from "./layer3";
 
 export const DataBase: StackNode = {
   title: "Data Base",
@@ -24,8 +25,10 @@ export const OperatingSystem: StackNode = {
 export const FrontEnd: StackNode = {
   title: "Front End",
   description: "",
-  point: 23,
-  children: []
+  children: [
+    { stack: ReactLibrary, weight: 5 },
+    { stack: RestAPI, weight: 2 }
+  ]
 };
 
 export const BackEnd: StackNode = {
