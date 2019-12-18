@@ -3,7 +3,8 @@ import {
   ComputerNetwork,
   FrontEnd,
   BackEnd,
-  OperatingSystem
+  OperatingSystem,
+  Communication
 } from "./layer2";
 import { StackNode } from "../../type/modelType";
 
@@ -21,8 +22,9 @@ export const Web: StackNode = {
   title: "Web Develop",
   description: "웹 시스템을 사용하는 애플리케이션 개발",
   children: [
-    { stack: FrontEnd, weight: 4 },
-    { stack: BackEnd, weight: 1 }
+    { stack: FrontEnd, weight: 10 },
+    { stack: BackEnd, weight: 4 },
+    { stack: Communication, weight: 5 }
   ]
 };
 
