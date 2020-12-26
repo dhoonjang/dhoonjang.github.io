@@ -1,0 +1,50 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("./font/Audiowide-Regular.ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 100%;
+}
+
+.IndexPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: #aaa;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition-property: background-color;
+  transition-duration: 2.5s;
+  .dhoonjang {
+    height: 6.5rem;
+    transition-duration: 0.5s;
+    user-select: none;
+    font-family: "Audiowide";
+    cursor: pointer;
+    font-size: 2rem;
+    &:hover {
+      font-size: 2.1rem;
+      opacity: 0.7;
+    }
+    &.dive {
+      transition-duration: 3s;
+      font-size: 5rem;
+      cursor: default;
+    }
+  }
+  &.dive {
+    background-color: #222;
+  }
+}
