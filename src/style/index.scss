@@ -5,6 +5,15 @@
   src: url("./font/Audiowide-Regular.ttf");
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -27,8 +36,8 @@ body {
   text-align: center;
   transition-property: background-color;
   transition-duration: 2.5s;
+  position: relative;
   .dhoonjang {
-    height: 6.5rem;
     transition-duration: 0.5s;
     user-select: none;
     font-family: "Audiowide";
@@ -43,6 +52,15 @@ body {
       font-size: 5rem;
       cursor: default;
     }
+  }
+  .background-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadein 4s;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
   }
   &.dive {
     background-color: #222;

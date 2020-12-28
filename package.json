@@ -18,7 +18,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@types/classnames": "^2.2.11",
     "classnames": "^2.2.6",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.8.0",
@@ -36,6 +35,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.11",
+    "@types/react-helmet": "^6.1.0",
     "typescript": "^4.1.3"
   }
 }

@@ -1,9 +1,12 @@
 import * as React from "react";
 import cn from "classnames";
+import BackGradation from "../canvas/BackGradation";
+import { Helmet } from "react-helmet";
 // markup
 const IndexPage: React.FC = () => {
   const [dive, setDive] = React.useState<boolean>(false);
   const [diveComplete, setDiveComplete] = React.useState<boolean>(false);
+  const canvasRef = React.useRef<HTMLDivElement>(null);
 
   const start = () => setDive(true);
 
@@ -17,13 +20,24 @@ const IndexPage: React.FC = () => {
     };
   }, [dive]);
 
+  React.useEffect(() => {
+    if (diveComplete && canvasRef.current) {
+      new BackGradation(canvasRef);
+    }
+  }, [diveComplete]);
+
   return (
     <div
       className={cn("IndexPage", {
         dive,
       })}
     >
-      {!diveComplete && (
+      <Helmet>
+        <title>dhoonjang</title>
+      </Helmet>
+      {diveComplete ? (
+        <div className="background-area" ref={canvasRef} />
+      ) : (
         <div
           className={cn("dhoonjang", {
             dive,
